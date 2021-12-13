@@ -1,9 +1,5 @@
 #!/usr/bin/env python
 # https://adventofcode.com/2021/day/11
-# TODO: understand what itertools.groupby() does, replicate without?
-# TODO: figure out how to implement a deep copy without importing copy
-# TODO: make note of map
-# TODO: implement curses
 
 
 import time
