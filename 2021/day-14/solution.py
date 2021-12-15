@@ -48,16 +48,16 @@ def part1(steps):
 
 def part2(steps):
     """ Tracking pairs instead. """
-    # convert our rules to output the two pairs returned when transforming a key
+    # convert our rules to output the two pairs returned when transforming a pair
     rule_map = {}
     for rule, char in rules.items():
         rule_map[rule] = [rule[0] + char, char + rule[1]]
 
-    # identify starting pairs from the seed starting string
+    # identify starting pairs from the seed string
     starting_pairs = [''.join(string[i:i + 2]) for i in range(len(string) - 1)]
 
     # count how many of each pair we have
-    # eg {'CH': 0, 'HH': 0, 'CB': 0, 'NH': 0, ...}
+    # eg {'CH': 1, 'HH': 0, 'CB': 1, 'NH': 1, ...}
     pairs = {}
     for pair in starting_pairs:
         pairs[pair] = pairs.get(pair, 0) + 1
