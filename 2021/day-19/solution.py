@@ -37,6 +37,11 @@ def get_distance_btw(a: list, b: list) -> float:
     return ((x2 - x1) ** 2 + (y2 - y1) ** 2 + (z2 - z1) ** 2) ** (1 / 2)
 
 
+def get_manhattan_distance(a: tuple, b: tuple) -> int:
+    """ Determine manhattan distance between two points in a 3d matrix. """
+    return abs(a[0] - b[0]) + abs(a[1] - b[1]) + abs(a[2] - b[2])
+
+
 def generate_fingerprints(beacons: list) -> list:
     """ For each beacon in list make a sublist of distances to every other beacon. """
     fingerprints = []
@@ -149,7 +154,7 @@ def main():
             if i != j:
                 a = scanner_positions[i]
                 b = scanner_positions[j]
-                distances.append(abs(a[0] - b[0]) + abs(a[1] - b[1]) + abs(a[2] - b[2]))
+                distances.append(get_manhattan_distance(a, b))
 
     print('Part 2:', max(distances))
 
