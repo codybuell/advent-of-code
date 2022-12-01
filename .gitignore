@@ -16,4 +16,5 @@ Thumbs.db
 # Repository Specific #
 #######################
 
-__pycache__
+*__pycache__
+.envrc
