@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# https://adventofcode.com/2023/day/11
+# https://adventofcode.com/2023/day/3
 
 import os
 import re
